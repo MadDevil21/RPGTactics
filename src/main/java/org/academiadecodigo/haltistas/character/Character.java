@@ -1,5 +1,6 @@
 package org.academiadecodigo.haltistas.character;
 
+import org.academiadecodigo.haltistas.GameMessages;
 import org.academiadecodigo.haltistas.character.Weapon.Weapon;
 
 public abstract class Character {
@@ -21,7 +22,7 @@ public abstract class Character {
     public void damageTaken(int hitDamage) {
 
         if (health <= 0) {
-            System.out.println("You are dead");
+            System.out.println(GameMessages.YOU_ARE_DEATH);
             return;
         }
 
