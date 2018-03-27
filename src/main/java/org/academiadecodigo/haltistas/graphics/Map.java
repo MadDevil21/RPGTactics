@@ -5,6 +5,8 @@ import org.academiadecodigo.simplegraphics.pictures.Picture;
 
 public class Map {
 
+    private GraphicCharacter graphic;
+
     public Map() {
 
         Picture picture = new Picture(Constants.PADDING, Constants.PADDING, "src/main/resources/map.jpg");
@@ -16,6 +18,7 @@ public class Map {
 
         //just to see grid and check picture size
         new Grid().init();
-        new GraphicCharacter().init();
+        graphic = new GraphicCharacter();
+        graphic.init();
     }
 }
