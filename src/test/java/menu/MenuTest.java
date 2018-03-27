@@ -1,6 +1,7 @@
 package menu;
 
 import org.academiadecodigo.haltistas.Controller;
+import org.academiadecodigo.haltistas.graphics.GraphicCharacter;
 import org.academiadecodigo.haltistas.menu.Menu;
 
 public class MenuTest {
@@ -9,6 +10,6 @@ public class MenuTest {
 
        Menu menu = new Menu();
        menu.init();
-       new Controller(menu).init();
+       //new Controller(menu).init();
     }
 }

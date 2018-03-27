@@ -1,5 +1,6 @@
 package org.academiadecodigo.haltistas;
 
+import org.academiadecodigo.haltistas.graphics.GraphicCharacter;
 import org.academiadecodigo.haltistas.menu.Menu;
 import org.academiadecodigo.simplegraphics.keyboard.Keyboard;
 import org.academiadecodigo.simplegraphics.keyboard.KeyboardEvent;
@@ -9,9 +10,11 @@ import org.academiadecodigo.simplegraphics.keyboard.KeyboardHandler;
 public class Controller implements KeyboardHandler {
 
     private Menu menu;
-    private Character character;
+    private GraphicCharacter character;
 
-    public Controller(Menu menu) {
+    public Controller(Menu menu, GraphicCharacter character) {
+
+        this.character = character;
         this.menu = menu;
     }
 
@@ -21,7 +24,8 @@ public class Controller implements KeyboardHandler {
 
         int[] keys = new int[]{
 
-                KeyboardEvent.KEY_DOWN, KeyboardEvent.KEY_UP, KeyboardEvent.KEY_ENTER, KeyboardEvent.KEY_BACKSPACE
+                KeyboardEvent.KEY_DOWN, KeyboardEvent.KEY_UP, KeyboardEvent.KEY_LEFT, KeyboardEvent.KEY_RIGHT,
+                KeyboardEvent.KEY_ENTER, KeyboardEvent.KEY_BACKSPACE
         };
 
         for (int key : keys) {

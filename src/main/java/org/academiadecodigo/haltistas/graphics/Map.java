@@ -18,7 +18,7 @@ public class Map {
 
         //just to see grid and check picture size
         new Grid().init();
-        graphic = new GraphicCharacter();
-        graphic.init();
+        //graphic = new GraphicCharacter();
+        //graphic.init();
     }
 }
