@@ -11,7 +11,7 @@ public class Randomizer {
         }
 
         Random r = new Random();
-        return r.nextInt(((max - min) + 1) + min) * Constants.CELL_SIZE + Constants.PADDING;
+        return r.nextInt(((max - min) + 1) + min);
 
     }
 }
