@@ -50,4 +50,26 @@ public abstract class AbstractMenu {
 
         return FRAME_WIDTH / 2 - CORRECT_CENTER_POS;
     }
+
+    public void moveDown() {
+
+        if (movePointer == MenuOption.values().length - 1) {
+            return;
+        }
+
+        options[movePointer].setColor(Color.RED);
+        movePointer++;
+        options[movePointer].setColor(Color.BLUE);
+    }
+
+    public void moveUp() {
+
+        if (movePointer == 0) {
+            return;
+        }
+
+        options[movePointer].setColor(Color.RED);
+        movePointer--;
+        options[movePointer].setColor(Color.BLUE);
+    }
 }
