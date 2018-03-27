@@ -1,5 +1,6 @@
 package org.academiadecodigo.haltistas.graphics;
 
+import org.academiadecodigo.haltistas.util.Constants;
 import org.academiadecodigo.simplegraphics.graphics.Rectangle;
 
 import java.util.LinkedList;
@@ -16,8 +17,7 @@ public class Grid {
 
     public void init() {
 
-        Rectangle rectangle = new Rectangle(Constants.PADDING, Constants.PADDING,
-                Constants.COLS * Constants.CELL_SIZE, Constants.ROWS * Constants.CELL_SIZE);
+        Rectangle rectangle = new Rectangle(Constants.PADDING, Constants.PADDING, Constants.GRIDX, Constants.GRIDY);
         rectangle.draw();
 
         drawCells();
