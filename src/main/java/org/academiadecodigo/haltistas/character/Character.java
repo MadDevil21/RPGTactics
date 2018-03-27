@@ -21,7 +21,17 @@ public class Character {
     }
 
 
-    public void damageTaken(int hitDamage) {
+
+    public void hitCharacter(Character character) {
+
+        character.hit(doDamage(weapon));
+    }
+
+
+
+
+
+    private void hit(int hitDamage) {
 
         if (health <= 0) {
             System.out.println(GameMessages.YOU_ARE_DEATH);
@@ -30,12 +40,6 @@ public class Character {
         }
 
         health -= hitDamage;
-    }
-
-
-    public void hitCharacter(Character character) {
-
-        character.damageTaken(doDamage(weapon));
     }
 
 
