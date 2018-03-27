@@ -3,12 +3,13 @@ package org.academiadecodigo.haltistas.character;
 import org.academiadecodigo.haltistas.GameMessages;
 import org.academiadecodigo.haltistas.character.Weapon.Weapon;
 
-public abstract class Character {
+public class Character {
 
     private int health;
     private int speed;
     private int damage;
     private Weapon weapon;
+    private boolean alive;
 
     public Character(Weapon weapon) {
 
@@ -16,13 +17,25 @@ public abstract class Character {
         speed = 3;
         damage = 10;
         this.weapon = weapon;
+        alive = true;
     }
 
 
-    public void damageTaken(int hitDamage) {
+
+    public void hitCharacter(Character character) {
+
+        character.hit(doDamage(weapon));
+    }
+
+
+
+
+
+    private void hit(int hitDamage) {
 
         if (health <= 0) {
             System.out.println(GameMessages.YOU_ARE_DEATH);
+            alive = false;
             return;
         }
 
@@ -30,15 +43,9 @@ public abstract class Character {
     }
 
 
-    public void hitCharacter(Character character) {
-
-        character.damageTaken(doDamage(weapon));
-    }
-
-
     public int doDamage(Weapon weapon) {
 
-        return damage * weapon.getWeaponDamage();
+        return damage + weapon.getWeaponDamage();
     }
 
 
@@ -48,4 +55,11 @@ public abstract class Character {
     }
 
 
+    public boolean isAlive() {
+        return alive;
+    }
+
+    public int getHealth() {
+        return health;
+    }
 }

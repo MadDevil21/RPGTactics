@@ -6,7 +6,7 @@ import org.academiadecodigo.haltistas.character.Weapon.Weapon;
 
 public enum CharacterType {
 
-    WARRIOR(new Sword(20)),
+    WARRIOR(new Sword(17)),
     WIZARD(new Rod(20));
 
     private Weapon weapon;
