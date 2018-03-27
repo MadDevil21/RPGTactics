@@ -8,7 +8,7 @@ public class GraphicCharacter {
 
     public void init() {
 
-        Rectangle character = new Rectangle(Randomizer.randomPos(0, 2), Randomizer.randomPos(0, Constants.ROWS),
+        Rectangle character = new Rectangle(Randomizer.randomPos(0, 2), Randomizer.randomPos(0, Constants.ROWS - 1),
                 Constants.CELL_SIZE, Constants.CELL_SIZE);
         character.fill();
     }
